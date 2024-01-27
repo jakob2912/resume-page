@@ -25,3 +25,29 @@ link2.addEventListener('click', () => {
 link3.addEventListener('click', () => {
   scrollToElement('footer');
 });
+
+function openEmailWindow() {
+  // Specify your email address
+  const emailAddress = "jakob.f.seidl@gmail.com";
+
+  // Encode email address
+  const encodedEmailAddress = encodeURIComponent(emailAddress);
+
+  // Construct mailto link with pre-filled email address
+  const mailtoLink = "mailto:" + encodedEmailAddress;
+
+  // Open the email window
+  window.location.href = mailtoLink;
+}
+
+const buttons = document.querySelectorAll('.btn')
+const emailLinks = document.querySelectorAll('.email-link')
+
+buttons.forEach((button) => {
+  button.addEventListener('click', openEmailWindow);
+})
+
+emailLinks.forEach((button) => {
+  button.addEventListener('click', openEmailWindow);
+})
+ 
