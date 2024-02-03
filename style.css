@@ -346,6 +346,10 @@ footer .column h4 {
   font-weight: 500;
 }
 
+.column a:hover {
+  cursor: pointer;
+}
+
 footer .column > a {
   display: block;
   color: #ccc;
